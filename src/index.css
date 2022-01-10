@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  @apply
+    flex
+    flex-col
+    m-0
+    h-screen
+    w-screen
+    bg-neutral-200
+}
+
+.dayCycleContainer {
+  width: 40vh;
+  @apply
+    flex
+    bg-white
+    m-2
+    p-2
+    h-2/5
+    shadow-lg
+}
+
+.dayCycle {
+  @apply
+    flex
+    flex-row
+    grid
+    grid-cols-11
+    grid-rows-11
+    gap-0
+    h-full
+    w-full
+    bg-gradient-to-b
+    from-cyan-500
+    via-rose-300
+    to-violet-900
+}
+
+.oneOClock {
+  @apply
+    -mx-0.5
+    col-start-5
+    row-start-11
+    self-start
+    justify-self-start
+}
+
+.twoOClock {
+  @apply
+    -mx-2
+    -my-2
+    col-start-4
+    row-start-10
+    self-end
+    justify-self-start
+}
+
+.threeOClock {
+  @apply
+    -ml-3
+    -mb-3
+    col-start-3
+    row-start-9
+    self-end
+    justify-self-start
+}
+
+.fourOClock {
+  @apply
+    -ml-2
+    -mb-2
+    col-start-2
+    row-start-8
+    self-end
+    justify-self-start
+}
+
+.fiveOClock {
+  @apply
+    -mb-0.5
+    col-start-1
+    row-start-7
+    self-end
+    justify-self-end
+}
+
+.sixOClock {
+  @apply
+    col-start-1
+    row-start-6
+    self-center
+    justify-self-center
+}
+
+.sevenOClock {
+  @apply
+    -mt-0.5
+    col-start-1
+    row-start-5
+    self-start
+    justify-self-end
+}
+
+.eightOClock {
+  @apply
+    -ml-2
+    -mt-2
+    col-start-2
+    row-start-4
+    self-start
+    justify-self-start
+}
+
+.nineOClock {
+  @apply
+    -ml-3
+    -mt-3
+    col-start-3
+    row-start-3
+    self-start
+    justify-self-start
+}
+
+.tenOClock {
+  @apply
+    -ml-2
+    -mt-2
+    col-start-4
+    row-start-2
+    self-start
+    justify-self-start
+}
+
+.elevenOClock {
+  @apply
+    -ml-0.5
+    col-start-5
+    row-start-1
+    self-end
+    justify-self-start
+}
+
+.twelveOClock {
+  @apply
+    col-start-6
+    row-start-1
+    self-center
+    justify-self-center
+}
+
+.midnight {
+  @apply
+    col-start-6
+    row-start-11
+    self-center
+    justify-self-center
+}
