@@ -57,6 +57,7 @@ code {
     from-cyan-500
     via-rose-300
     to-violet-900
+    transition-all
 }
 
 .midnight {
@@ -281,4 +282,36 @@ code {
     row-start-11
     self-start
     justify-self-end
+}
+
+.newMoon {
+  content: "\1F311";
+}
+
+.waxingCrescent {
+  content: "\1F312";
+}
+
+.firstQuarter {
+  content: "\1F313";
+}
+
+.waxingGibbous {
+  content: "\1F314";
+}
+
+.fullMoon {
+  content: "\1F315";
+}
+
+.waningGibbous {
+  content: "\1F316";
+}
+
+.lastQuarter {
+  content: "\1F317";
+}
+
+.waningCrescent {
+  content: "\1F318";
 }
