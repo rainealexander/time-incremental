@@ -53,11 +53,19 @@ code {
     gap-0
     h-full
     w-full
-    bg-gradient-to-b
+    /* bg-gradient-to-b
     from-cyan-500
     via-rose-300
-    to-violet-900
+    to-violet-900 */
     transition-all
+    z-10
+}
+
+#dayCycleCanvas {
+  width: 40vh;
+  @apply
+    absolute
+    h-2/5
 }
 
 .midnight {
