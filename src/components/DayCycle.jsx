@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { dayCycleClasses, moonCycleClasses, moonPhases } from './cycleClasses';
-import { canvasSetup, getLineThroughOrigin, drawGradient } from '../helpers/dayCycle';
+import Canvas from './Canvas';
 
 const DayNight = () => {
   const [timeOfDay, setTimeOfDay] = useState(0);
@@ -19,7 +19,7 @@ const DayNight = () => {
     }
     setTimeout(() => {
       dayLoop();
-    }, 200);
+    }, 500);
     function moonLoop() {
       if (moonCycle < 7) {
         setMoonCycle(moonCycle + 1);
@@ -27,27 +27,14 @@ const DayNight = () => {
         setMoonCycle(0);
       }
     }
+    
     setDayClass(dayCycleClasses[timeOfDay]);
     setMoonClass(moonCycleClasses[moonCycle]);
   }, [timeOfDay, moonCycle])
 
-  useEffect(() => {
-    function makeGradient(angle = 0) {
-      let canvas = document.getElementById('dayCycleCanvas');
-      let ctx = canvasSetup(canvas);
-      const width = canvas.getBoundingClientRect().width;
-      const height = canvas.getBoundingClientRect().height;
-      const rect = { x1: 0, y1: 0, x2: width, y2: height};
-      let radius = Math.sqrt(width^2 + height^2);
-      const line = getLineThroughOrigin({ x: width/2, y: height/2}, radius, angle);
-      drawGradient(line, ctx, rect);
-    }
-    makeGradient();
-  })
-
   return (
     <div className='dayCycleContainer'>
-      <canvas id="dayCycleCanvas"></canvas>
+      <Canvas />
       <div className='dayCycle'>
         <span className={moonClass}>{moonPhases[moonCycle]}</span>
         <span className={dayClass}>&#127774;</span>

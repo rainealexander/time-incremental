@@ -53,6 +53,7 @@ code {
     gap-0
     h-full
     w-full
+    bg-transparent
     /* bg-gradient-to-b
     from-cyan-500
     via-rose-300

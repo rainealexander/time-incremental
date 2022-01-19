@@ -10,12 +10,15 @@ const getPointOnCircle = (origin, radius, angle) => {
 };
 
 const getLineThroughOrigin = (origin, radius, angle) => {
+  //console.log(`angle1: ${angle}`);
   let p1 = getPointOnCircle(origin, radius, angle);
-  let p2 = getPointOnCircle(origin, radius, angle);
+  let angle2 = angle + 180;
+  //console.log(`angle2: ${angle2}`);
+  let p2 = getPointOnCircle(origin, radius, angle2);
   return { p1, p2 };
 };
 
-const drawGradient = (line, ctx, rect) => {
+const drawGradient = (ctx, line, rect) => {
   let gradient = ctx.createLinearGradient(line.p1.x, line.p1.y, line.p2.x, line.p2.y);
   gradient.addColorStop(0, '#06b6d4');
   gradient.addColorStop(0.5, '#fda4af');
